@@ -4,7 +4,8 @@ from urllib.parse import quote_plus
 import pyperclip
 
 def google_maps(address):
-    link = 'https://www.google.com/maps/place/' + quote_plus(address)
+    query = quote_plus(address)
+    link = f"https://www.google.com/maps/search/?api=1&query={query}"
     webbrowser.open(link)
     print(f"Opened Google Maps for: {address}")
 
